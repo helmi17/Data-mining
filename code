@@ -1,0 +1,18 @@
+import numpy as ip
+import seaborn as sea
+import matplotlib.pyplot as mat
+from scipy import stats
+import pandas as data
+
+for i in range(4):
+    cek1=data.read_csv("tugas 1.csv",usecols=[i])
+    Q1= cek1.quantile(0.25)
+    print("Kuartil awal = ",Q1)
+    print(" ")
+    Q2= cek1.quantile(0.50)
+    print("Kuartil tengah = ",Q2)
+    print(" ")
+    Q3= cek1.quantile(0.75)
+    print("Kuartil tengah = ",Q3)
+    print(" ")
+    sea.distplot(cek1);
